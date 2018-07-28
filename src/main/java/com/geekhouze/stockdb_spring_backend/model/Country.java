@@ -9,6 +9,7 @@ import java.util.Date;
 @Entity
 public class Country {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name ="id")
