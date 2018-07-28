@@ -9,27 +9,23 @@ import java.util.Date;
 @Entity
 public class Country {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name ="id")
+    @Column(name = "id")
     private long id;
 
     @Column(name = "name")
     private String name;
 
-    @Column(name ="created_at")
+    @Column(name = "created_at")
     private Date createAt;
 
-    @Column(name ="updated_at")
+    @Column(name = "updated_at")
     private Date updateAt;
 
-
-
-    public Country(){
+    public Country() {
 
     }
-
 
     public long getId() {
         return id;
