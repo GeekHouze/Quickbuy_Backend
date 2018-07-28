@@ -15,12 +15,12 @@ public class CountryResource {
     private CountryRepository countryRepository;
 
 
-    @GetMapping(value ="/")
+    @GetMapping(value ="")
     public List<Country> getCountries(){
         return countryRepository.findAll();
     }
 
-    @PostMapping(value ="/")
+    @PostMapping(value ="")
     public List<Country>addCountries(@RequestBody Country country){
         countryRepository.save(country);
         return countryRepository.findAll();
