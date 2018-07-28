@@ -8,20 +8,20 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value ="/countries")
+@RequestMapping(value = "/countries")
 public class CountryResource {
 
     @Autowired
     private CountryRepository countryRepository;
 
 
-    @GetMapping(value ="")
-    public List<Country> getCountries(){
+    @GetMapping(value = "")
+    public List<Country> getCountries() {
         return countryRepository.findAll();
     }
 
-    @PostMapping(value ="")
-    public List<Country>addCountries(@RequestBody Country country){
+    @PostMapping(value = "")
+    public List<Country> addCountries(@RequestBody Country country) {
         countryRepository.save(country);
         return countryRepository.findAll();
 

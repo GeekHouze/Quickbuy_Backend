@@ -8,19 +8,19 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value="/users")
+@RequestMapping(value = "/users")
 public class UsersResource {
 
     @Autowired
     UserRepository userRepository;
 
-    @GetMapping(value="/")
+    @GetMapping(value = "/")
     public List<User> getUsers() {
         return userRepository.findAll();
     }
 
-    @PostMapping(value="/")
-    public List<User> addUser(@RequestBody final User user){
+    @PostMapping(value = "/")
+    public List<User> addUser(@RequestBody final User user) {
         userRepository.save(user);
         return userRepository.findAll();
     }
